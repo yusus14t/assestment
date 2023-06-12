@@ -49,12 +49,14 @@ window.addEventListener("load", async () => {
   });
   
   // -----------filter-----------------//
+
+  //--------------new ---------------//
   let OrderStatus = document.getElementById("OrderStatus");
 
   OrderStatus.addEventListener("change", async (e) => {
     let data = await productlist();
     if (!e.target.checked) {
-      data = data.filter((d) => d.orderStatus === New);
+      data = data.filter((d) => d.orderStatus === "New");
       appendList(data);
       let count = document.getElementById("count");
       count.innerHTML = Object.keys(data).length;
@@ -65,3 +67,58 @@ window.addEventListener("load", async () => {
     }
   });
   
+  //----------------------------------------//
+
+  //---------------------pacekd----------------//
+   let packed = document.getElementById("Packed");
+
+   packed.addEventListener("change", async (e) => {
+     let data = await productlist();
+     if (!e.target.checked) {
+       data = data.filter((d) => d.orderStatus === "Packed");
+       appendList(data);
+       let count = document.getElementById("count");
+       count.innerHTML = Object.keys(data).length;
+     } else {
+       appendList(data);
+       let count = document.getElementById("count");
+       count.innerHTML = Object.keys(data).length;
+     }
+   });
+  //-----------------////
+
+
+  //////-------------delivered------------------///
+  let delivered = document.getElementById("delivered");
+
+  delivered.addEventListener("change", async (e) => {
+    let data = await productlist();
+    if (!e.target.checked) {
+      data = data.filter((d) => d.orderStatus === "Delivered");
+      appendList(data);
+      let count = document.getElementById("count");
+      count.innerHTML = Object.keys(data).length;
+    } else {
+      appendList(data);
+      let count = document.getElementById("count");
+      count.innerHTML = Object.keys(data).length;
+    }
+  });
+
+
+  ///-------------------------------------Intrasnsit------///
+  let Intrasnsit = document.getElementById("Intrasnsit");
+
+  Intrasnsit.addEventListener("change", async (e) => {
+    let data = await productlist();
+    if (!e.target.checked) {
+      data = data.filter((d) => d.orderStatus === "InTransit");
+      appendList(data);
+      let count = document.getElementById("count");
+      count.innerHTML = Object.keys(data).length;
+    } else {
+      appendList(data);
+      let count = document.getElementById("count");
+      count.innerHTML = Object.keys(data).length;
+    }
+  });

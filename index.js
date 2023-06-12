@@ -18,7 +18,6 @@ let loginT = false
         JSON.stringify({ user: username.value, password: password.value })
         );
         window.location.replace("/orders.html");
-        loginT = true
       } else {
         alert("Please enter valid credentials!");
       }

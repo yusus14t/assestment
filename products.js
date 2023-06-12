@@ -10,10 +10,6 @@ window.addEventListener("load", () => {
 
 function userData(data) {
   
-
-
-
-  // console.log(data, "<<<<<<<<<<<<<<<<<<");
   return `
     <tr class="TableRow ExpiredRow">
                 <td class="SecondaryText">${data.id}</td>
@@ -78,7 +74,7 @@ const date = new Date();
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
-var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var mm = String(today.getMonth() + 1).padStart(2, "0"); 
 var yyyy = today.getFullYear();
 
 today = dd + "-" + mm + "-" + yyyy;
