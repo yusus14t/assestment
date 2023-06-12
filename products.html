@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .PageWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8% 4%;
+}
+
+.MainHeading {
+    margin: 0;
+}
+
+.OrdersWrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 0;
+}
+
+.FilterWrapper {
+    width: 180px;
+}
+
+.FilterWrapper h3 {
+    margin: 0;
+}
+
+.FilterOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.FilterCheckbox {
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.FilterCheckbox input {
+    margin-right: 12px;
+}
+
+.OrderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.OrderTable th, .OrderTable td {
+    text-align: left;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.TableRow td {
+  width: 100px;
+    background-color: #fff;
+    border-bottom: 4px solid #F6F7FB;
+}
+
+.TableRow.ExpiredRow td {
+    /* background-color: #F6F7FB; */
+}
+
+.PrimaryText {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.SecondaryText {
+    color: #8c8c8c;
+}
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar"></div>
+
+    <div class="PageWrapper">
+      <h1 class="MainHeading">Products</h1>
+      <div class="OrdersWrapper">
+        <div class="FilterWrapper">
+          <h3>Filters</h3>
+          <div class="FilterOptions">
+            <p class="count">Count: <span id="count"></span> </p>
+            <label class="FilterCheckbox"
+              ><input
+                type="checkbox"
+                name="product-expired"
+                checked=""
+                id="expired"
+              />Expired</label
+            ><label class="FilterCheckbox"
+              ><input id="lowStock"
+             type="checkbox" name="product-low-stock" checked="" />Low
+              Stock</label
+            >
+          </div>
+        </div>
+        <div style="width: 100%;">
+          <table class="OrderTable">
+            <tr>
+              <th>ID</th>
+              <th>Product Name</th>
+              <th>Product Brand</th>
+              <th style="min-width: 100px;">Expiry Date</th>
+              <th>Unit Price</th>
+              <th>Stock</th>
+            </tr>
+            <tbody id="products-data">
+              
+              
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./navbar.js"></script>
+    <script src="./products.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Orders</title>
+  </head>
+  <body>
+    <div class="navbar"></div>
+
+    <div class="PageWrapper">
+      <h1 class="MainHeading">Orders</h1>
+      <div class="OrdersWrapper">
+        <div class="FilterWrapper">
+          <h3>Filters</h3>
+          <div class="FilterOptions">
+            <p class="count">Count: <span id="count"></span> </p>
+            <label class="FilterCheckbox"
+              ><input type="checkbox" id="OrderStatus" name="orders-new" checked="" />New</label
+            ><label class="FilterCheckbox"
+              ><input
+                type="checkbox"
+                name="orders-packed"
+                checked=""
+              />Packed</label
+            ><label class="FilterCheckbox"
+              ><input
+                type="checkbox"
+                name="orders-transit"
+                checked=""
+              />InTransit</label
+            ><label class="FilterCheckbox"
+              ><input
+                type="checkbox"
+                name="orders-delivered"
+                checked=""
+              />Delivered</label
+            >
+          </div>
+        </div>
+        <div style="width: 100%;">
+          <table class="OrderTable">
+            <tr>
+              <th>ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+            <tbody id="orders-data">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./navbar.js"></script>
+    <script src="./orders.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>

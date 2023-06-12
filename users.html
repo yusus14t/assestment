@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Users</title>
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="PageWrapper">
+      <h1 class="MainHeading">Users</h1>
+      <div class="">
+        <form class="UserSearchbox">
+          <input
+            class="SearchBox"
+            type="search"
+            placeholder="Search by Name"
+            id="searchBox"
+          /><input type="reset" id="reset" class="Button" value="Reset" />
+        </form>
+        <div >
+          <table class="OrderTable">
+            <tr>
+              <th>ID</th>
+              <th>User Avatar</th>
+              <th>Full Name</th>
+              <th style="min-width: 100px;">DoB</th>
+              <th>Gender</th>
+              <th>Current Location</th>
+            </tr>
+            <tbody id="User-data">
+              
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./navbar.js"></script>
+
+    <script src="./users.js"></script>
+  </body>
+</html>
